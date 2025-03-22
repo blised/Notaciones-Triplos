@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Hero Section -->
+    <header class="text-center py-20 bg-white shadow-md">
+        <h1 class="text-4xl font-bold">Landing template for startups</h1>
+        <p class="text-gray-500 mt-4">Ingrese una expresión infija para convertirla.</p>
+
+        <!-- Input para ingresar la expresión -->
+        <div class="mt-6 flex justify-center">
+            <input type="text" id="expresion" class="px-4 py-2 border rounded-lg w-1/2" placeholder="Ejemplo: (3 + 5) * 2">
+            <button onclick="convertir()" class="ml-2 px-6 py-2 bg-pink-500 text-white font-bold rounded-lg">Convertir</button>
+        </div>
+    </header>
+
+    <!-- Sección de Resultados -->
+    <section class="py-16 text-center">
+        <h2 class="text-3xl font-bold mb-6">Notaciones</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div class="bg-white p-6 shadow rounded-lg">
+                <h3 class="text-lg font-bold">Infija</h3>
+                <p id="resultadoInfija" class="text-gray-500">Esperando entrada...</p>
+            </div>
+            <div class="bg-white p-6 shadow rounded-lg">
+                <h3 class="text-lg font-bold">Postfija</h3>
+                <p id="resultadoPostfija" class="text-gray-500">Esperando entrada...</p>
+            </div>
+            <div class="bg-white p-6 shadow rounded-lg">
+                <h3 class="text-lg font-bold">Prefija</h3>
+                <p id="resultadoPrefija" class="text-gray-500">Esperando entrada...</p>
+            </div>
+            <div class="bg-white p-6 shadow rounded-lg">
+                <h3 class="text-lg font-bold">Resultado</h3>
+                <p id="resultadoFinal" class="text-gray-500">Esperando entrada...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Triplos -->
+    <section class="py-16 text-center bg-gray-200">
+        <h2 class="text-3xl font-bold mb-6">Código Intermedio (Triplos)</h2>
+        <div class="max-w-4xl mx-auto bg-white p-6 shadow rounded-lg">
+            <table id="triplosTable" class="table-auto w-full border-collapse border border-gray-300 mt-6" style="display: none;">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="border px-4 py-2">Índice</th>
+                        <th class="border px-4 py-2">Operación</th>
+                        <th class="border px-4 py-2">Argumento 1</th>
+                        <th class="border px-4 py-2">Argumento 2</th>
+                        <th class="border px-4 py-2">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody id="triplosBody"></tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>

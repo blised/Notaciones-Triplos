@@ -1,0 +1,10 @@
+version: "3.9.1"
+
+services:
+  backend:
+    build: ./backend
+    container_name: flask-backend2
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
