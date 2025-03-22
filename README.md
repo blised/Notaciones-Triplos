@@ -1,4 +1,12 @@
-# Agnes
+# Team #4 7SA AutomatasII
+
+- Jesús Alberto Solis Molina
+E22080461
+- Yeison Ediel Soberanis Quijano
+E22080131
+- Brayan Jacobo Sierra Tuz
+E22080130
+
 
 A landing page template.
 
